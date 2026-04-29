@@ -16,14 +16,14 @@ export const metadata: Metadata = {
   authors: [{ name: "TireFitPro" }],
   creator: "TireFitPro",
   publisher: "TireFitPro",
-  metadataBase: new URL("https://tirefitpro.com"),
+  metadataBase: new URL("https://tirefitpro.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tirefitpro.com",
+    url: "https://tirefitpro.app",
     title: "Tire Size Calculator & Fitment Tool | TireFitPro",
     description:
       "Compare tire sizes, calculate diameter, speedometer error, and see if your new tires will fit your vehicle.",

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://tirefitpro.com/sitemap.xml',
+    sitemap: 'https://tirefitpro.app/sitemap.xml',
   };
 }

@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       type: 'article',
       title: `${post.title} | TireFitPro`,
       description: post.metaDescription,
-      url: `https://tirefitpro.com/blog/${post.slug}`,
+      url: `https://tirefitpro.app/blog/${post.slug}`,
       publishedTime: new Date(post.date).toISOString(),
     },
     twitter: {
