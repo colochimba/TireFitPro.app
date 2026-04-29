@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -57,6 +58,12 @@ export default function RootLayout({
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
+        />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8257580371633170"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
       </head>
       <body className="min-h-screen bg-[#0F172A] antialiased">
