@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0F172A;
+  color: #E2E8F0;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-[#1E293B] border border-[#334155] rounded-2xl;
+  }
+
+  .input-field {
+    @apply w-full bg-[#0F172A] border border-[#334155] text-white rounded-xl px-4 py-3 text-lg font-semibold
+           focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500
+           transition-all duration-200 placeholder-slate-600;
+  }
+
+  .btn-primary {
+    @apply bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 px-8 rounded-xl
+           transition-all duration-200 transform hover:scale-105 active:scale-95
+           shadow-lg hover:shadow-orange-500/25 shadow-orange-500/10;
+  }
+
+  .btn-secondary {
+    @apply bg-[#1E293B] hover:bg-[#334155] text-slate-300 hover:text-white font-semibold py-3 px-6 rounded-xl
+           border border-[#334155] hover:border-slate-500 transition-all duration-200;
+  }
+
+  .metric-card {
+    @apply card p-4 flex flex-col gap-1 hover:border-orange-500/40 transition-all duration-200;
+  }
+
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .badge-green {
+    @apply badge bg-emerald-500/20 text-emerald-400 border border-emerald-500/30;
+  }
+
+  .badge-yellow {
+    @apply badge bg-yellow-500/20 text-yellow-400 border border-yellow-500/30;
+  }
+
+  .badge-red {
+    @apply badge bg-red-500/20 text-red-400 border border-red-500/30;
+  }
+
+  .badge-orange {
+    @apply badge bg-orange-500/20 text-orange-400 border border-orange-500/30;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-widest text-slate-500;
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.15);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F97316;
+}
+
+/* Number input arrows removal for cleanliness */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Smooth transitions for hover effects */
+.transition-smooth {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
